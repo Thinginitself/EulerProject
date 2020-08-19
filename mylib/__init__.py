@@ -1,3 +1,3 @@
 __arthor__ = "Thinginitself"
 
-import primes
+from . import primes

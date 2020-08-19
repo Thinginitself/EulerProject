@@ -1,7 +1,7 @@
 
 def kinds(n, m):
     f = [0 for i in range(n*m+1)]
-    for i in range(1, m+1):
+    for _ in range(1, m+1):
         f[i] = 1
     for _ in range(n-1):
         for k in range(n*m, 0, -1):
@@ -12,16 +12,15 @@ def kinds(n, m):
     return f
 
 
-kx = kinds(9, 4)
-ky = kinds(6, 6)
+if __name__ == "__main__":
+    kx = kinds(9, 4)
+    ky = kinds(6, 6)
 
-print(kx, ky)
+    s = sum(kx) * sum(ky)
+    r = 0
 
-s = sum(kx) * sum(ky)
-r = 0
+    for i in range(37):
+        for j in range(i):
+            r += kx[i] * ky[j]
 
-for i in range(37):
-    for j in range(i):
-        r += kx[i] * ky[j]
-
-print(r/s)
+    print(r/s)
