@@ -3,7 +3,7 @@
 
 # a^2 + b^2 = c^2
 # a = l * (m^2 - n^2)
-# a = l * (2 * m * n)
+# b = l * (2 * m * n)
 # c = l * (m^2 + n^2)
 
 import math
